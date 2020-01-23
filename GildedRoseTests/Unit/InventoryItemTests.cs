@@ -18,15 +18,15 @@
         }
 
         [Test]
-        [TestCase( "Aged​ ​Brie​", ​1,​ ​1, 0, 2 )]
-        [TestCase( "Backstage​ ​passes​", -1,​ 2, -1, 0 )]
-        [TestCase( "Backstage​ ​passes​", 9,​ 2, 8, 4 )]
-        [TestCase( "Sulfuras​", ​2,​ 2, 2, 2 )]
-        [TestCase( "Aged​ ​Brie​", ​1,​ ​1, 0, 2 )]
-        [TestCase( "Normal​ ​Item​", ​-1,​ 55, -2, 50 )]
-        [TestCase( "Normal​ ​Item​​", ​2,​ 2, 1, 1 )]
-        [TestCase( "Conjured", 2,​ ​2, 1, 0 )]
-        [TestCase( "Conjured", -1, 5, -2, 1 )]
+        [TestCase("Aged​ ​Brie​", 1, 1, 0, 2)]
+        [TestCase("Backstage​ ​passes​", -1, 2, -2, 0)]
+        [TestCase("Backstage​ ​passes​", 9, 2, 8, 4)]
+        [TestCase("Sulfuras​",2, 2, 2, 2)]
+        [TestCase("Aged​ ​Brie​", 1, 1, 0, 2)]
+        [TestCase("Normal​ ​Item​", -1, 55, -2, 50)]
+        [TestCase("Normal​ ​Item​​", 2, 2, 1, 1)]
+        [TestCase("Conjured", 2, 2, 1, 0)]
+        [TestCase("Conjured", -1, 5, -2, 1)]
         public void TestItemInventoryUpdate(string name, int inputSellIn, int inputQuality, int outputSellIn, int outputQuality)
         {
             var item = new InventoryItem(name, inputSellIn, inputQuality);
