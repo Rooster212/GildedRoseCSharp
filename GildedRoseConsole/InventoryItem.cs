@@ -17,9 +17,9 @@ namespace GildedRoseConsole
             this.Quality = quality;
         }
 
-        public static void ProcessInventoryUpdate()
+        public static InventoryItem ProcessInventoryUpdate(InventoryItem item)
         {
-            // TODO: process update
+            return new InventoryItem("", 1, 2);
         }
     }
 }
