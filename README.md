@@ -7,13 +7,22 @@ Assumptions made:
 - Console application for user input is used.
 
 Item assumptions made:
-- Aged Brie doesn't increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
-
+- Aged Brie *doesn't* increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
 
 ## Tests
 Tests can be run through the Visual Studio Test Explorer once Nuget packages have been restored, as the NUnit test runner is installed as a package.
 
-Alternatively, the command line can be used.
+Tests are also run through the GitHub Actions, the results of which can be viewed [here](https://github.com/Rooster212/GildedRoseCSharp/actions).
+
+Alternatively, the command line can be used. .NET Core 3.1 must be installed on the system.
+
+```bash
+# dotnet build will also restore NuGet packages
+dotnet build
+
+# Run the tests
+dotnet test GildedRose.sln
+```
 
 
 # Specification
