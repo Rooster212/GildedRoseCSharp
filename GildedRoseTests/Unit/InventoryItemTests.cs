@@ -50,9 +50,9 @@
         [TestCase("conjured", false)]
         public void TestItemValidName(string name, bool shouldBeValid)
         {
-            var isValidName = InventoryItem.NameIsValid(name);
+            var newItem = new InventoryItem(name, 1, 2);
 
-            Assert.AreEqual(shouldBeValid, isValidName);
+            Assert.AreEqual(shouldBeValid, newItem.HasValidName);
         }
     }
 }
