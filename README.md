@@ -1,7 +1,16 @@
 ﻿# Gilded Rose
 
-.NET Core solution - to run in Visual Studio
+.NET Core solution, developed in Visual Studio 2019.
 
+Assumptions made:
+- Item names are case sensitive.
+- Console application for user input is used.
+
+
+## Tests
+Tests can be run through the Visual Studio Test Explorer once Nuget packages have been restored, as the NUnit test runner is installed as a package.
+
+Alternatively, the command line can be used.
 
 
 # Specification

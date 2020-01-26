@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace GildedRoseConsole
+﻿namespace GildedRoseConsole
 {
     public class InventoryItem
     {
@@ -20,6 +16,11 @@ namespace GildedRoseConsole
         public static InventoryItem ProcessInventoryUpdate(InventoryItem item)
         {
             return new InventoryItem("", 1, 2);
+        }
+
+        public static bool NameIsValid(string name)
+        {
+            return false;
         }
     }
 }

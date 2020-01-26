@@ -36,5 +36,23 @@
             Assert.AreEqual(outputSellIn, itemProcessed.SellIn);
             Assert.AreEqual(outputQuality, itemProcessed.Quality);
         }
+
+        [Test]
+        [TestCase("Aged​ ​Brie​", true)]
+        [TestCase("Aged​ ​brie​", false)]
+        [TestCase("Backstage​ ​passes", true)]
+        [TestCase("Backstage​ ​Passes", false)]
+        [TestCase("Sulfuras", true)]
+        [TestCase("SULFURAS", false)]
+        [TestCase("Normal​ ​Item", true)]
+        [TestCase("Normal​ ​item", false)]
+        [TestCase("Conjured", true)]
+        [TestCase("conjured", false)]
+        public void TestItemValidName(string name, bool shouldBeValid)
+        {
+            var isValidName = InventoryItem.NameIsValid(name);
+
+            Assert.AreEqual(shouldBeValid, isValidName);
+        }
     }
 }
