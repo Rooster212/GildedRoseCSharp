@@ -5,16 +5,36 @@
 Assumptions made:
 - Item names are case sensitive.
 - Console application for user input is used.
+- Console application takes one line entry for the item, and outputs on the next line.
 
 Item assumptions made:
 - Aged Brie *doesn't* increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
+
+## Running the applicationm
+
+The application can be run through the Run dialog in Visual Studio.
+
+Alternatively, the command line can be used. .NET Core 3.1 must be installed on the system and configured correctly in the user `PATH`.
+
+Assuming you are using Powershell on Windows:
+
+```bash
+# dotnet build will also restore NuGet packages
+dotnet build --configuration Debug
+
+# If you aren't in the console project folder, you should enter that
+cd GildedRoseConsole
+
+# Run the application
+dotnet run
+```
 
 ## Tests
 Tests can be run through the Visual Studio Test Explorer once Nuget packages have been restored, as the NUnit test runner is installed as a package.
 
 Tests are also run through the GitHub Actions, the results of which can be viewed [here](https://github.com/Rooster212/GildedRoseCSharp/actions).
 
-Alternatively, the command line can be used. .NET Core 3.1 must be installed on the system.
+Alternatively, the command line can be used. .NET Core 3.1 must be installed on the system and configured correctly in the user `PATH`.
 
 ```bash
 # dotnet build will also restore NuGet packages

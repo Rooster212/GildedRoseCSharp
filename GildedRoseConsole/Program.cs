@@ -24,7 +24,7 @@
             Console.WriteLine("For example, an Aged Brie with a sell by date of 3 days time and a quality of 2:");
             Console.Write(Environment.NewLine);
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("    <item> <sellInDays> <quality>");
+            Console.WriteLine("    Aged Brie 3 2");
             Console.Write(Environment.NewLine);
             Console.ResetColor();
             
@@ -35,7 +35,9 @@
 
             do
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 var userInput = Console.ReadLine();
+                Console.ResetColor();
 
                 if (string.Equals(userInput, "") || string.Equals(userInput, "exit", StringComparison.InvariantCultureIgnoreCase))
                 {
@@ -43,7 +45,6 @@
                 }
                 else
                 {
-
                     Tuple<string, int, int> inputVariables;
                     try
                     {
@@ -65,8 +66,9 @@
 
                     inventoryItem.ProcessInventoryUpdate();
 
-                    // TODO: output value string instead of Processed
-                    Console.WriteLine("processed");
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.WriteLine(inventoryItem.ToString());
+                    Console.ResetColor();
                 }
             } while (true);
         }
