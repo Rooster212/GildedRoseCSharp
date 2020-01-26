@@ -6,6 +6,9 @@ Assumptions made:
 - Item names are case sensitive.
 - Console application for user input is used.
 
+Item assumptions made:
+- Aged Brie doesn't increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
+
 
 ## Tests
 Tests can be run through the Visual Studio Test Explorer once Nuget packages have been restored, as the NUnit test runner is installed as a package.

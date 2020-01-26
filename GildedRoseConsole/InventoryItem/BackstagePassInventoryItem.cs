@@ -11,7 +11,20 @@
 
         public override void ProcessInventoryUpdate()
         {
-            throw new NotImplementedException();
+            this.SellIn -= 1;
+            
+            if (this.SellIn <= 10 && this.SellIn > 5)
+            {
+                this.Quality += 2;
+            } 
+            else if (this.SellIn <= 5 && this.SellIn >= 0)
+            {
+                this.Quality += 3;
+            } 
+            else if (this.SellIn < 0)
+            {
+                this.Quality = 0;
+            }
         }
     }
 }
