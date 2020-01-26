@@ -1,6 +1,7 @@
 ﻿namespace GildedRoseConsole
 {
     using System;
+
     public class InvalidInventoryItem : InventoryItem
     {
         public InvalidInventoryItem(string name, int sellIn, int quality) : base(name, sellIn, quality)

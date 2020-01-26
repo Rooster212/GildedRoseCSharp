@@ -43,13 +43,13 @@
         }
 
         [Test]
-        [TestCase("Aged​ ​Brie​", true)]
-        [TestCase("Aged​ ​brie​", false)]
-        [TestCase("Backstage​ ​passes", true)]
+        [TestCase("Aged Brie", true)]
+        [TestCase("Aged brie​", false)]
+        [TestCase("Backstage passes", true)]
         [TestCase("Backstage​ ​Passes", false)]
         [TestCase("Sulfuras", true)]
         [TestCase("SULFURAS", false)]
-        [TestCase("Normal​ ​Item", true)]
+        [TestCase("Normal Item", true)]
         [TestCase("Normal​ ​item", false)]
         [TestCase("Conjured", true)]
         [TestCase("conjured", false)]
@@ -57,7 +57,14 @@
         {
             var newItem = InventoryItem.CreateInventoryItem(name, 1, 2);
 
-            Assert.AreEqual(!valid, newItem is InvalidInventoryItem);
+            if (valid)
+            {
+                Assert.IsFalse(newItem is InvalidInventoryItem);
+            }
+            else
+            {
+                Assert.IsTrue(newItem is InvalidInventoryItem);
+            }
         }
     }
 }

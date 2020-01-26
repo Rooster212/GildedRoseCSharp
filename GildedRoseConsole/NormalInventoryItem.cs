@@ -2,11 +2,11 @@
 {
     using System;
 
-    public class BackstagePassInventoryItem : InventoryItem
+    public class NormalInventoryItem : InventoryItem
     {
-        public BackstagePassInventoryItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
+        public NormalInventoryItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {
-            
+
         }
 
         public override void ProcessInventoryUpdate()
