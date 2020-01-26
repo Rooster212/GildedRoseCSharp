@@ -11,7 +11,19 @@
 
         public override void ProcessInventoryUpdate()
         {
-            throw new NotImplementedException();
+            this.SellIn--;
+            this.Quality -= 2;
+
+            // If the sell by has passed, we apply the quality reduction twice
+            if (this.SellIn < 0)
+            {
+                this.Quality -= 2;
+            }
+
+            if (this.Quality < 0)
+            {
+                this.Quality = 0;
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
 
         public override void ProcessInventoryUpdate()
         {
-            throw new NotImplementedException();
+            // Never has to be sold and never decreases in quality so no further implementation required.
         }
     }
 }

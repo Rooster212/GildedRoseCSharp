@@ -11,8 +11,8 @@
 
         public override void ProcessInventoryUpdate()
         {
-            this.SellIn -= 1;
-            this.Quality += 1;
+            this.SellIn--;
+            this.Quality++;
 
             if (this.Quality < 0) {
                 this.Quality = 0;
