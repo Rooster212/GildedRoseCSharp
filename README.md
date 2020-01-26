@@ -8,7 +8,8 @@ Assumptions made:
 - Console application takes one line entry for the item, and outputs on the next line.
 
 Item assumptions made:
-- Aged Brie *doesn't* increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
+- Item names are case sensitive.
+- Aged Brie *doesn't* increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date).
 
 ## Running the application
 
