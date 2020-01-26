@@ -11,7 +11,7 @@
 
         public override void ProcessInventoryUpdate()
         {
-            throw new InvalidOperationException($"Cannot process invaid item {Name}");
+            throw new InvalidOperationException($"Cannot process invalid item {Name}");
         }
     }
 }
