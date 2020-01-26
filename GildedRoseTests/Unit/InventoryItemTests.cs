@@ -14,7 +14,7 @@
         [TestCase("Nintendo Switch", -1, 14)]
         public void TestInventoryItemCanBeConstructed(string name, int sellIn, int quality)
         {
-            Assert.DoesNotThrow(() => new InventoryItem(name, sellIn, quality));
+            Assert.DoesNotThrow(() => InventoryItem.CreateInventoryItem(name, sellIn, quality));
         }
 
         [Test]
@@ -29,12 +29,17 @@
         [TestCase("Conjured", -1, 5, -2, 1)]
         public void TestItemInventoryUpdate(string name, int inputSellIn, int inputQuality, int outputSellIn, int outputQuality)
         {
-            var item = new InventoryItem(name, inputSellIn, inputQuality);
-            var itemProcessed = InventoryItem.ProcessInventoryUpdate(item);
+            var item = InventoryItem.CreateInventoryItem(name, inputSellIn, inputQuality);
+            item.ProcessInventoryUpdate();
 
-            Assert.AreEqual(name, itemProcessed.Name);
-            Assert.AreEqual(outputSellIn, itemProcessed.SellIn);
-            Assert.AreEqual(outputQuality, itemProcessed.Quality);
+            if (item is InvalidInventoryItem)
+            {
+                Assert.Fail("Item is invalid");
+            }
+
+            Assert.AreEqual(name, item.Name);
+            Assert.AreEqual(outputSellIn, item.SellIn);
+            Assert.AreEqual(outputQuality, item.Quality);
         }
 
         [Test]
@@ -48,11 +53,11 @@
         [TestCase("Normal​ ​item", false)]
         [TestCase("Conjured", true)]
         [TestCase("conjured", false)]
-        public void TestItemValidName(string name, bool shouldBeValid)
+        public void TestItemValidName(string name, bool valid)
         {
-            var newItem = new InventoryItem(name, 1, 2);
+            var newItem = InventoryItem.CreateInventoryItem(name, 1, 2);
 
-            Assert.AreEqual(shouldBeValid, newItem.HasValidName);
+            Assert.AreEqual(!valid, newItem is InvalidInventoryItem);
         }
     }
 }
