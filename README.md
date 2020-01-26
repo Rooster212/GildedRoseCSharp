@@ -10,7 +10,7 @@ Assumptions made:
 Item assumptions made:
 - Aged Brie *doesn't* increase in quality twice as fast after it's sell by date (other items decrease in quality twice as fast after their sell by date)
 
-## Running the applicationm
+## Running the application
 
 The application can be run through the Run dialog in Visual Studio.
 
@@ -23,7 +23,7 @@ Assuming you are using Powershell on Windows:
 dotnet build --configuration Debug
 
 # If you aren't in the console project folder, you should enter that
-cd GildedRoseConsole
+cd GildedRoseConsole\
 
 # Run the application
 dotnet run
