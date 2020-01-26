@@ -9,7 +9,6 @@
     [TestFixture]
     public class ConsoleProcessingTests
     {
-        [Ignore("Ignored temporarily for commit as functionality is unimplemented")]
         [TestCase("hello world 1 1", "hello world", 1, 1)]
         [TestCase("Aged Brie 1 1", "Aged Brie", 1, 1)]
         [TestCase("Backstage passes -1 2", "Backstage passes", -1, 2)]
@@ -28,7 +27,6 @@
             Assert.AreEqual(outputQuality, inputVariables.Item3);
         }
 
-        [Ignore("Ignored temporarily for commit as functionality is unimplemented")]
         [TestCase("hello world")]
         [TestCase("")]
         [TestCase("foo bar bar bar")]
