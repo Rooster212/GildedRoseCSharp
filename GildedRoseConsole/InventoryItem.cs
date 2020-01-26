@@ -7,13 +7,20 @@
         public string Name { get; protected set; }
         public int SellIn { get; protected set; }
         public int Quality { get; protected set; }
-        public bool Exists { get; protected set; }
+
+        protected InventoryItem(string name, int sellIn, int quality)
+        {
+            this.Name = name;
+            this.SellIn = sellIn;
+            this.Quality = quality;
+        }
 
         public static IInventoryItem CreateInventoryItem(string name, int inputSellIn, int inputQuality)
         {
             return name switch
             {
-                _ => new InvalidInventoryItem(name)
+                "Backstage passes" => new BackstagePassInventoryItem(name, inputSellIn, inputQuality),
+                _ => new InvalidInventoryItem(name, inputSellIn, inputQuality)
             };
         }
 

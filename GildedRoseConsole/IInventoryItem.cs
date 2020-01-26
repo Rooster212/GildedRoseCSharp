@@ -9,7 +9,6 @@ namespace GildedRoseConsole
         public string Name { get; }
         public int SellIn { get; }
         public int Quality { get; }
-        public bool Exists { get; }
 
         public void ProcessInventoryUpdate();
     }

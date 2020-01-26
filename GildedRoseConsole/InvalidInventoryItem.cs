@@ -3,9 +3,9 @@
     using System;
     public class InvalidInventoryItem : InventoryItem
     {
-        public InvalidInventoryItem(string name)
+        public InvalidInventoryItem(string name, int sellIn, int quality) : base(name, sellIn, quality)
         {
-            this.Name = name;
+
         }
 
         public override void ProcessInventoryUpdate()
