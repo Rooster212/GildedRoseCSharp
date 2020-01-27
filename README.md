@@ -3,7 +3,6 @@
 .NET Core solution, developed in Visual Studio 2019.
 
 Assumptions made:
-- Item names are case sensitive.
 - Console application for user input is used.
 - Console application takes one line entry for the item, and outputs on the next line.
 

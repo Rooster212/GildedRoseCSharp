@@ -60,7 +60,7 @@
 
                     if (inventoryItem is InvalidInventoryItem)
                     {
-                        WriteErrorToConsole($"Invalid or unknown inventory item '{inventoryItem.Name}'. Please enter a known item.");
+                        WriteErrorToConsole($"NO SUCH ITEM");
                         continue;
                     }
 
